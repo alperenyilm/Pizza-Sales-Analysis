@@ -98,7 +98,7 @@ FROM (
 ) AS order_totals;
 
 SELECT COUNT(DISTINCT(order_id)) AS total_orders FROM pizza_sales;
-
+```
 ### Power BI Calculations and Columns
 Several calculated columns and measures were created in Power BI to enhance the analysis:
 
