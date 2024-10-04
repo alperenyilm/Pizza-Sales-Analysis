@@ -83,7 +83,7 @@ The exploratory analysis focused on answering the following key questions:
 - **Total Revenue**: Sum of the `total_price` field.
 - **Average Order Value**: Average total price per order.
 - **Total Pizzas Sold**: Sum of the `quantity` field.
-- **Weekly and Hourly Orders**: Grouped and counted by the day of the week and time of day.
+- **Weekly, Monthly and Hourly Orders**: Grouped and counted by the day of the week, monthly and time of day.
 - **Pizza Category and Name Sales**: Grouped by pizza categories and names to identify popular items.
   
 Example SQL queries used:
