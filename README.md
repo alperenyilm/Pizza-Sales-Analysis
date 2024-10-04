@@ -171,5 +171,7 @@ Some limitations of the analysis include:
 
 **Limited Geographic Data**: The dataset does not include geographic or regional breakdowns for the sales data. Expanding the analysis to consider geographical preferences and regional marketing strategies could enhance targeted promotions and sales campaigns.
 
-**Missing Service Type Information**: The dataset does not differentiate between dine-in and takeout orders, which could provide deeper insights into customer preferences and order behaviors. Adding this information in future datasets would allow for more targeted marketing strategies and operational improvements.
+**Missing Service Type Information**: The dataset does not specify whether orders were for delivery (takeout) or dine-in services. This information could provide deeper insights into customer preferences and behavior. Including this distinction in future datasets would enable more tailored marketing strategies and operational improvements.
+
+
 
