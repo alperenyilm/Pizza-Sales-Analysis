@@ -99,75 +99,77 @@ FROM (
 
 SELECT COUNT(DISTINCT(order_id)) AS total_orders FROM pizza_sales;
 ```
+
 ### Power BI Calculations and Columns
 Several calculated columns and measures were created in Power BI to enhance the analysis:
 
 #### Calculated Columns:
 
-Order Day: Extracts the first three letters of the day of the week for easier grouping and visualization.
+Tabii, işte başlıkları kalın olacak şekilde düzenledim:
+
+**Order Day**: Extracts the first three letters of the day of the week for easier grouping and visualization.  
 Order Day = UPPER(LEFT(pizza_sales[Day Name], 3))
 
-Order Month: Extracts the first three letters of the month for better clarity in graphs.
+**Order Month**: Extracts the first three letters of the month for better clarity in graphs.  
 Order Month = UPPER(LEFT(pizza_sales[Month Name], 3))
 
-#### Measures:
-Total Orders: This measure calculates the distinct number of orders.
+#### **Measures**:
+**Total Orders**: This measure calculates the distinct number of orders.  
 Total Orders = DISTINCTCOUNT(pizza_sales[order_id])
 
-Total Pizzas Sold: This measure sums the quantity of pizzas sold.
+**Total Pizzas Sold**: This measure sums the quantity of pizzas sold.  
 Total Pizzas Sold = SUM(pizza_sales[quantity])
 
-Total Revenue: This measure sums the total revenue from pizza sales.
+**Total Revenue**: This measure sums the total revenue from pizza sales.  
 Total Revenue = SUM(pizza_sales[total_price])
 
-Average Order Value: This measure calculates the average value per order.
+**Average Order Value**: This measure calculates the average value per order.  
 Average Order Value = [Total Revenue] / [Total Orders]
 
-Average Pizzas Per Order: This measure calculates the average number of pizzas per order.
+**Average Pizzas Per Order**: This measure calculates the average number of pizzas per order.  
 Average Pizzas Per Order = [Total Pizzas Sold] / [Total Orders]
 
-### Results/Findings
+### **Results/Findings**
 
 The analysis results are summarized as follows:
-Results/Findings
-Total Revenue: The total revenue generated from pizza sales is 817.86K. This data indicates strong sales volume, particularly supported by higher order volumes during weekdays (Wednesday and Friday).
 
-Total Pizzas Sold: A total of 50K pizzas were sold. The majority of pizzas sold were in the Large and Medium sizes, while smaller sizes saw significantly fewer sales. This suggests a customer preference for larger pizzas.
+**Total Revenue**: The total revenue generated from pizza sales is 817.86K. This data indicates strong sales volume, particularly supported by higher order volumes during weekdays (Wednesday and Friday).
 
-Total Orders: There were 21K total orders, and the average order value was calculated to be 38.31. The average order value indicates a solid pricing strategy for the business.
+**Total Pizzas Sold**: A total of 50K pizzas were sold. The majority of pizzas sold were in the Large and Medium sizes, while smaller sizes saw significantly fewer sales. This suggests a customer preference for larger pizzas.
 
-Top 5 Pizzas by Orders and Revenue: The most ordered pizzas included "The Classic Deluxe" and "The Hawaiian". In terms of revenue, "The Thai Chicken Pizza" and "The Barbecue Chicken Pizza" stood out as the top performers.
+**Total Orders**: There were 21K total orders, and the average order value was calculated to be 38.31. The average order value indicates a solid pricing strategy for the business.
 
-Sales by Time of Day and Day of the Week: Most orders were concentrated during lunch hours (12:00-14:00) and evening hours (17:00-19:00). Friday was the busiest day of the week, while Sunday had the lowest order volume.
+**Top 5 Pizzas by Orders and Revenue**: The most ordered pizzas included "The Classic Deluxe" and "The Hawaiian". In terms of revenue, "The Thai Chicken Pizza" and "The Barbecue Chicken Pizza" stood out as the top performers.
 
-Sales Breakdown by Pizza Category: Classic pizzas (26.91%) were the best-selling category, followed by Supreme (23.96%) and Veggie (23.96%) pizzas. This demonstrates a clear preference for Classic pizza options among customers.
+**Sales by Time of Day and Day of the Week**: Most orders were concentrated during lunch hours (12:00-14:00) and evening hours (17:00-19:00). Friday was the busiest day of the week, while Sunday had the lowest order volume.
 
-Monthly Order Trends: Sales peaked in July and August, followed by a gradual decline. This indicates possible seasonal demand, which could be linked to summer promotions or events.
+**Sales Breakdown by Pizza Category**: Classic pizzas (26.91%) were the best-selling category, followed by Supreme (23.96%) and Veggie (23.96%) pizzas. This demonstrates a clear preference for Classic pizza options among customers.
 
-### Recommendations
+**Monthly Order Trends**: Sales peaked in July and August, followed by a gradual decline. This indicates possible seasonal demand, which could be linked to summer promotions or events.
 
-Target High-Demand Times for Promotions: Focus marketing efforts on the high-demand hours, particularly during lunch (12:00-14:00) and dinner (17:00-19:00) times. Special promotions or discounts during these periods can further boost customer engagement and sales.
+### **Recommendations**
 
-Focus on Best-Selling Pizzas: Pizzas like "The Thai Chicken Pizza" and "The Classic Deluxe" are among the top sellers. Promotions specifically for these high-performing items can drive even greater revenue. Similarly, optimizing the menu by focusing on these popular pizzas can streamline customer choices.
+**Target High-Demand Times for Promotions**: Focus marketing efforts on the high-demand hours, particularly during lunch (12:00-14:00) and dinner (17:00-19:00) times. Special promotions or discounts during these periods can further boost customer engagement and sales.
 
-Menu Optimization for Low-Performing Pizzas: The least popular pizzas, such as "The Brie Carre" and "The Green Garden", could be removed from the menu or promoted differently. Menu adjustments should be considered to maximize profitability by highlighting the most popular or profitable items.
+**Focus on Best-Selling Pizzas**: Pizzas like "The Thai Chicken Pizza" and "The Classic Deluxe" are among the top sellers. Promotions specifically for these high-performing items can drive even greater revenue. Similarly, optimizing the menu by focusing on these popular pizzas can streamline customer choices.
 
-Increase Marketing for Weekends: Despite the high order volume on Fridays, weekend sales—especially on Sundays—show a significant drop. Introducing weekend-exclusive offers or family-sized meal deals could help increase sales on weekends.
+**Menu Optimization for Low-Performing Pizzas**: The least popular pizzas, such as "The Brie Carre" and "The Green Garden", could be removed from the menu or promoted differently. Menu adjustments should be considered to maximize profitability by highlighting the most popular or profitable items.
 
-Improve Seasonal Sales Strategy: Sales peaked during the summer months (July and August). Building a targeted marketing strategy to capitalize on these seasonal trends can enhance profitability. Advanced planning for inventory and promotions could further boost revenue during these peak months.
+**Increase Marketing for Weekends**: Despite the high order volume on Fridays, weekend sales—especially on Sundays—show a significant drop. Introducing weekend-exclusive offers or family-sized meal deals could help increase sales on weekends.
 
-### Limitations
+**Improve Seasonal Sales Strategy**: Sales peaked during the summer months (July and August). Building a targeted marketing strategy to capitalize on these seasonal trends can enhance profitability. Advanced planning for inventory and promotions could further boost revenue during these peak months.
+
+### **Limitations**
 
 Some limitations of the analysis include:
 
-Date Range: The data covers a limited time period (2015). Future analyses could benefit from a broader date range to capture long-term trends and more comprehensive insights.
+**Date Range**: The data covers a limited time period (2015). Future analyses could benefit from a broader date range to capture long-term trends and more comprehensive insights.
 
-Customer Segmentation: The dataset does not include detailed customer segmentation data, such as demographics or purchase behavior. For deeper insights, collecting more customer-specific data (e.g., age, location, frequency of orders) would be beneficial.
+**Customer Segmentation**: The dataset does not include detailed customer segmentation data, such as demographics or purchase behavior. For deeper insights, collecting more customer-specific data (e.g., age, location, frequency of orders) would be beneficial.
 
-External Factors: The data does not account for external factors such as weather conditions, economic influences, or promotional campaigns that could have affected sales trends. Incorporating external data could help explain some seasonal trends or regional differences in sales.
+**External Factors**: The data does not account for external factors such as weather conditions, economic influences, or promotional campaigns that could have affected sales trends. Incorporating external data could help explain some seasonal trends or regional differences in sales.
 
-Limited Geographic Data: The dataset does not include geographic or regional breakdowns for the sales data. Expanding the analysis to consider geographical preferences and regional marketing strategies could enhance targeted promotions and sales campaigns.
-
+**Limited Geographic Data**: The dataset does not include geographic or regional breakdowns for the sales data. Expanding the analysis to consider geographical preferences and regional marketing strategies could enhance targeted promotions and sales campaigns.
 
 
 
