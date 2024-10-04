@@ -79,7 +79,7 @@ The exploratory analysis focused on answering the following key questions:
 
 ## Data Analysis
 
-###SQL queries were used for deeper analysis:
+### SQL queries were used for deeper analysis:
 - **Total Revenue**: Sum of the `total_price` field.
 - **Average Order Value**: Average total price per order.
 - **Total Pizzas Sold**: Sum of the `quantity` field.
@@ -99,10 +99,10 @@ FROM (
 
 SELECT COUNT(DISTINCT(order_id)) AS total_orders FROM pizza_sales;
 
-###Power BI Calculations and Columns
+### Power BI Calculations and Columns
 Several calculated columns and measures were created in Power BI to enhance the analysis:
 
-####Calculated Columns:
+#### Calculated Columns:
 
 Order Day: Extracts the first three letters of the day of the week for easier grouping and visualization.
 Order Day = UPPER(LEFT(pizza_sales[Day Name], 3))
@@ -110,7 +110,7 @@ Order Day = UPPER(LEFT(pizza_sales[Day Name], 3))
 Order Month: Extracts the first three letters of the month for better clarity in graphs.
 Order Month = UPPER(LEFT(pizza_sales[Month Name], 3))
 
-####Measures:
+#### Measures:
 Total Orders: This measure calculates the distinct number of orders.
 Total Orders = DISTINCTCOUNT(pizza_sales[order_id])
 
