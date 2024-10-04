@@ -1,4 +1,4 @@
-# Pizza Sales Analysis Project
+# Pizza Sales Analysis
 
 ## Table of Contents
 1. [Project Description](#project-description)
