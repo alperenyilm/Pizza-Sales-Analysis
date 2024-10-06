@@ -31,7 +31,7 @@ This project aims to analyze pizza sales data in order to identify key business 
 
 ## Dataset
 
-- **Source**: The dataset was provided in CSV format.
+- **Source**: This project utilizes the **EDA-Pizza Restaurant Sales**, which is available for download [here](https://www.kaggle.com/code/melikedilekci/eda-pizza-restaurant-sales).
 - **Structure**: The dataset includes the following columns:
   - `order_details_id`: Unique identifier for each order detail.
   - `order_id`: Identifier for the order.
